@@ -13,7 +13,7 @@ function randomIntFromInterval(min, max) { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-<script src="https://kit.fontawesome.com/5b312ab430.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5b312ab430.js" crossorigin="anonymous" async></script>
 
 const pics = [
   {
