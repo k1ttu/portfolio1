@@ -53,6 +53,7 @@ const RevealOnScrollDown = ({ children }) => {
   const ref = useRef(null);
 
   useEffect(() => {
+    const reffer = ref.current;
     const scrollObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
@@ -63,8 +64,8 @@ const RevealOnScrollDown = ({ children }) => {
     scrollObserver.observe(ref.current);
 
     return () => {
-      if (ref.current) {
-        scrollObserver.unobserve(ref.current);
+      if (reffer) {
+        scrollObserver.unobserve(reffer);
       }
     };
   }, []);
@@ -84,6 +85,7 @@ const RevealOnScrollLeft = ({ children }, styles) => {
   const ref = useRef(null);
 
   useEffect(() => {
+    const reffer = ref.current;
     const scrollObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
@@ -91,11 +93,11 @@ const RevealOnScrollLeft = ({ children }, styles) => {
       }
     });
 
-    scrollObserver.observe(ref.current);
+    scrollObserver.observe(reffer);
 
     return () => {
-      if (ref.current) {
-        scrollObserver.unobserve(ref.current);
+      if (reffer) {
+        scrollObserver.unobserve(reffer);
       }
     };
   }, []);
