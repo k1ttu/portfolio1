@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10",
+    "eslint": "^8.51.0",
     "postcss": "^8",
     "tailwindcss": "^3"
   }

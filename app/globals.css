@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --animation-delay:0.3s;
@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 145, 252, 220;
+    
     --background-start-rgb: 14, 25, 45;
     --background-end-rgb: 14, 25 ,45;
   }
@@ -25,15 +25,7 @@
   align-content: center;
   align-items: center;
 }
-.header-renderer::after{
-  content: "";
-  width: max-content;
-  background-color: rgb(156, 163 , 175);
-  display: block;
-  height: 1px;
-  margin-left: 20px;
 
-}
 body {
   
   background: linear-gradient(
