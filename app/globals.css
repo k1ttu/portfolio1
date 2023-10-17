@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   
   --background-start-rgb: 14, 25, 45;
   --background-end-rgb: 14, 25, 45;
   --animation-delay:0.3s;
-}
+} */
 
 .project-container{
   background-color: rgb(21, 34 , 62);
@@ -16,6 +16,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     
+    --background-start-rgb: 14, 25, 45;
+    --background-end-rgb: 14, 25 ,45;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
     --background-start-rgb: 14, 25, 45;
     --background-end-rgb: 14, 25 ,45;
   }
