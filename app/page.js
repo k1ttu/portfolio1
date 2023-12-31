@@ -121,7 +121,7 @@ const skillSet = [
     id: 'java'
   },
   {
-    name: "HTML5",
+    name: "Python",
     id: 'html'
   },
   {
@@ -133,11 +133,11 @@ const skillSet = [
     id: "tailwind"
   },
   {
-    name: "React JS",
+    name: "React Native / JS",
     id: "react"
   },
   {
-    name: "Database",
+    name: "MongoDB",
     id: "database"
   }
 ]
