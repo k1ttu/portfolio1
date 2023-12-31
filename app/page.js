@@ -296,7 +296,7 @@ export default function Home() {
                     <li key={index} className='lg:w-1/3 sm:w-1/2  p-5 w-4/5 hover:-translate-y-3 transition'>
                       <div className=' project-container flex flex-col '>
                         <div className='  lg:h-96 sm:h-68 flex flex-col align-middle py-5  items-center '>
-                          <a className='title text-2xl font-semibold text-gray-300 hover:underline hover:text-emerald-300 cursor-pointer' href={item.link}>
+                          <a className='title text-2xl font-semibold text-gray-300 hover:underline hover:text-emerald-300 cursor-pointer' href={item.link} target='_blank'>
                             {item.title}
                           </a>
                           <div className='px-5 py-6 h-52 text-base self-center text-gray-400'>
