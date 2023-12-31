@@ -207,7 +207,7 @@ export default function Home() {
                 <a className={navLink + ""} href={`#${item.id}`} ><span className='text-emerald-300' target="_blank">0{index + 1}. </span> {item.title} </a>
               </li>
             ))}
-            <li><a className={"link h-7 w-10 border-[1px] px-7 pt-3 ml-4 text-sm border-emerald-300 rounded-md text-emerald-300 font-light transition hover:text-blue-950 hover:font-bold cursor-pointer hover:bg-emerald-300 pb-3  content-center items-center font-mono"} href="#" >
+            <li><a className={"link h-7 w-10 border-[1px] px-7 pt-3 ml-4 text-sm border-emerald-300 rounded-md text-emerald-300 font-light transition hover:text-blue-950 hover:font-bold cursor-pointer hover:bg-emerald-300 pb-3  content-center items-center font-mono"} href="https://drive.google.com/file/d/1NB89lwSC4vPykpWwe6AHDVDsgfrNox2C/view?usp=share_link" target='_blank' >
               Resume
             </a>
             </li>
