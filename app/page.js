@@ -34,17 +34,20 @@ const pojects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio website that I built for myself using some front-end libraries, I deployed it using GitHub Pages",
-    technologies: "Next.js , Tailwind CSS , Animation.css , React-Typed"
+    technologies: "Next.js , Tailwind CSS and other front-end libraries",
+    link:"https://portfolio1-iota-lovat.vercel.app"
   },
   {
     title: "Personal Blog",
-    description: "A blogging website that I built using FireBase and front-end libraries where you can into my personal philosphies, my expiriences through life and my poetry. The project is not yet deployed, but will be within a month.",
-    technologies: "Next.js , animate.css , FireBase "
+    description: "A blogging website that I built using FireBase and front-end libraries where you can into my personal philosphies, my expiriences through life and my poetry. The project is not yet deployed, but will be soon enough.",
+    technologies: "Next.js , MongoDB and other front-end libraries",
+    link:"https://github.com/k1ttu/blog1"
   },
   {
-    title: "Write.it",
-    description: "A web/desktop app where you can jort down your thoughts, experiences and your little nusings in short notes, built to promote consise writing.",
-    technologies: "Next.js , FireBase , Animate.css"
+    title: "Weather Flake",
+    description: "A web application that implements Weather API to provide users with real time weather updates.",
+    technologies: "React.js , Weather API",
+    link:"https://weatherflake.vercel.app"
   }
 ]
 
@@ -292,9 +295,9 @@ export default function Home() {
                     <li key={index} className='lg:w-1/3 sm:w-1/2  p-5 w-4/5 hover:-translate-y-3 transition'>
                       <div className=' project-container flex flex-col '>
                         <div className='  lg:h-96 sm:h-68 flex flex-col align-middle py-5  items-center '>
-                          <a className='title text-2xl font-semibold text-gray-300 hover:underline hover:text-emerald-300 cursor-pointer' href={item.link}>
+                          <Link className='title text-2xl font-semibold text-gray-300 hover:underline hover:text-emerald-300 cursor-pointer' href={item.link}>
                             {item.title}
-                          </a>
+                          </Link>
                           <div className='px-5 py-6 h-52 text-base self-center text-gray-400'>
                             {item.description}
                           </div>
