@@ -8,6 +8,7 @@ import pic1 from "./images/pic1.jpg"
 import pic2 from "./images/pic2.jpg"
 import pic3 from "./images/pic3.jpg"
 import pic4 from './images/pic4.jpg'
+import ProfilePic from './images/ProfilePic.jpg';
 
 
 function randomIntFromInterval(min, max) { // min and max included
@@ -18,38 +19,41 @@ function randomIntFromInterval(min, max) { // min and max included
 
 const pics = [
   {
-    path: pic1,
-  },
-  {
-    path: pic4
-  },
-  {
-    path: pic3
-  },
-  {
-    path: pic2
-  },
+    path: ProfilePic,
+  }
 ]
 
 const pojects = [
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio website that I built for myself using some front-end libraries, I deployed it using GitHub Pages",
-    technologies: "Next.js , Tailwind CSS and other front-end libraries",
-    link:"https://portfolio1-iota-lovat.vercel.app"
+    title: "Retro IDE",
+    description: "An online code compiler with support for over 10 languages that implements AI and code compilation APIs to provide space and time complexities and the output.",
+    technologies: "Next.js , Open AI , REST APIs ",
+    link:"https://retro-ide.netlify.app/"
   },
   {
-    title: "Personal Blog",
-    description: "A blogging website that I built using FireBase and front-end libraries where you can into my personal philosphies, my expiriences through life and my poetry. The project is not yet deployed, but will be soon enough.",
-    technologies: "Next.js , MongoDB and other front-end libraries",
-    link:"https://github.com/k1ttu/blog1"
+    title: "CashQue",
+    description: "Personal finance management application that allows users to manage their transactions. It also provides an yearly and monthly summary of transactions.",
+    technologies: "Express JS , Expo, React native, css",
+    link:"https://github.com/k1ttu/CashQue"
   },
   {
     title: "Weather Flake",
     description: "A web application that implements Weather API to provide users with real time weather updates.",
     technologies: "React.js , Weather API",
     link:"https://weatherflake.vercel.app"
-  }
+  },
+  {
+    title: "Personal Blog",
+    description: "A blogging website that I built using FireBase and front-end libraries where you can into my personal philosphies, my expiriences through life and my poetry. The project is not yet deployed, but will be soon enough.",
+    technologies: "Angular, Express JS , Mongodb",
+    link:"https://github.com/k1ttu/blog1"
+  },
+  {
+    title: "Portfolio Website",
+    description: "My personal portfolio website that I use to tabulate all of my current academic and professional achievements.",
+    technologies: "Next.js , TaliWindCSS and other front end libraries",
+    link:"https://portfolio1-iota-lovat.vercel.app/"
+  },
 ]
 
 const RevealOnScrollDown = ({ children }) => {
@@ -121,25 +125,34 @@ const skillSet = [
     id: 'java'
   },
   {
-    name: "Python",
-    id: 'html'
+    name: "C++",
+    id: 'c++'
   },
   {
     name: "JavaScript",
     id: "javascript"
   },
   {
-    name: "TailWind CSS",
+    name: "Cascading Style Sheets",
     id: "tailwind"
   },
   {
-    name: "React Native / JS",
+    name: "React Native",
+    id: "react"
+  },
+  {
+    name:"Angular",
+    id:"angular"
+  },
+  {
+    name: "React JS",
     id: "react"
   },
   {
     name: "MongoDB",
     id: "database"
-  }
+  },
+
 ]
 const headerRender = (index, name) => {
   return (
@@ -184,6 +197,10 @@ const homeLinks = [
   {
     name: "My LinkedIn",
     link: "https://www.linkedin.com/in/chirag-sharma-0551a1260/"
+  },
+  {
+    name: "My Resume",
+    link: "https://drive.google.com/file/d/162nfi8Ng1MzAskTCDSKXzmdn6MO3ePvo/view"
   }
 ]
 export default function Home() {
@@ -195,7 +212,7 @@ export default function Home() {
   const home = "";
   const [name, setName] = useState("");
   const image = "tansition hover:-translate-x-2 hover:-translate-y-2  hover:shadow-xl h-auto w-2/3 md:h-fit md:w-2/3";
-  const source = pics.at(randomIntFromInterval(0, 3)).path;
+  const source = pics.at(0).path;
   return (
     <div>
       <nav className='font-mono' id="website">
@@ -207,10 +224,9 @@ export default function Home() {
                 <a className={navLink + ""} href={`#${item.id}`} ><span className='text-emerald-300' target="_blank">0{index + 1}. </span> {item.title} </a>
               </li>
             ))}
-            <li><a className={"link h-7 w-10 border-[1px] px-7 pt-3 ml-4 text-sm border-emerald-300 rounded-md text-emerald-300 font-light transition hover:text-blue-950 hover:font-bold cursor-pointer hover:bg-emerald-300 pb-3  content-center items-center font-mono"} href="https://drive.google.com/file/d/1NB89lwSC4vPykpWwe6AHDVDsgfrNox2C/view?usp=share_link" target='_blank' >
-              Resume
-            </a>
-            </li>
+            <li key={4} className={`ml-5  animate__animated animate__fadeInDownBig animate__delay-4s animate__fast`}>
+                <a target="_blank" className={navLink + ""} href={`https://chirag-writes-stuff.netlify.app/`} ><span className='text-emerald-300' target="_blank">04. </span> My Blog </a>
+              </li>
           </ul>
 
         </div>
@@ -242,8 +258,8 @@ export default function Home() {
                 <div className='text-gray-400 text-lg py-10 content-center justify-center md:w-1/2 font-light' >
                   <p className='text-left'>
                     Hello. I'm Chirag, I'm currently pursuing Bachelor's in Mathematics and Computing Engineering from Delhi Technological University. Being a tech-enthusiast, I've always wanted to work with fascinating computer technologies and become a software engineer. Currently, I'm working on my competetive Programming skills and web and mobile development.<br /><br />
-                    My hobbies include Reading, Writing and poetry, you can check out my blog. Apart from that I have a keen interest in music and I am a solo Guitarist.<br /><br />
-                    My current skill set includes the following:
+                    My hobbies include Reading, Writing and poetry, you can check out my blog. Apart from that also I have a keen interest in music and I am a solo Guitarist.<br /><br />
+                    My current technical skill set includes the following:
                   </p>
 
                   <div className='flex justify-start'>
@@ -288,7 +304,7 @@ export default function Home() {
             <div className='md:mx-40 mx-12 my-20 font-light text-lg ' id="projects">
               {headerRender(2, "What I've Built")}
               <p className='text-gray-400 text-[18px] py-8'>
-                I like to build website and applications that can fill a gap between the requirements of the people and the softwares which are capable of fulfilling those requirements. Following is a list of the projects that I've build so far, and also an overview of what I aspire to build next.
+                During my engineering jouney, I've been very motivated towards building softwares that can fill the gap between one's requirements using technology. Following are some of the projects that I have built for the web and mobile.
               </p>
               <RevealOnScrollLeft>
                 <ul className='flex flex-wrap justify-evenly'>
